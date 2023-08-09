@@ -1,45 +1,47 @@
-<!-- component -->
-<header class="text-white shadow-lg max-md:flex max-sm:block "> 
-    <div class="container mx-auto flex justify-center h-24">
-        <a href="" class="flex items-center justify-center">
-            <img
-                class="h-16 max-sm:hidden"
-                src="../assets/images/logo-buque.png"
-                alt="Logo Buque Choco Rosas"
-            />
-            <span class="ml-4 uppercase font-black max-sm:hidden">Buque Choco-Rosas</span>
-        </a>
-        <nav class="contents font-medium text-lg">
-            <ul class="mx-auto flex items-center">
-                <li class="sm:p-5 xl:p-8 active">
-                    <a href="">
-                        <span>Início</span>
-                    </a>
+---
+import Image from "astro/components/Image.astro";
+import Logo from "../assets/images/logo-tecido-final.png";
+---
+
+<nav>
+    <div class="bg-fuchsia-100 shadow-md">
+        <div class="mx-auto object-center w-full flex justify-center py-5">
+            <a href="/">
+                <Image
+                    src={Logo}
+                    alt="Logo Buque Choco Rosas"
+                    class="max-sm:hidden lg:w-32 lg:h-20 max-md:hidden"
+                />
+            </a>
+            <ul class="flex items-center">
+                <li
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight px-8 max-sm:border-hidden max-sm:px-4"
+                >
+                    <a href="/">Início</a>
                 </li>
-                <li class="p-5 xl:p-8">
-                    <a href="">
-                        <span>Quem Somos</span>
-                    </a>
+                <li
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-x border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4"
+                >
+                    <a href="/projects">Links</a>
                 </li>
-                <li class="p-5 xl:p-8">
-                    <a href="">
-                        <span>Produtos</span>
-                    </a>
+                <li
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4"
+                >
+                    <a href="/tools">Produtos</a>
                 </li>
-                <li class="p-5 xl:p-8">
-                    <a href="">
-                        <span>Links</span>
-                    </a>
+                <li
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4"
+                >
+                    <a target="_blank" href="https://github.com/RaphMt117"
+                        >Sobre</a
+                    >
                 </li>
-                <li class="p-5 xl:p-8">
-                    <a href="">
-                        <span>Contato</span>
-                    </a>
+                <li
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-8 max-sm:border-hidden cursor-pointer max-sm:px-4"
+                >
+                    <a>Contato</a>
                 </li>
             </ul>
-        </nav>
-        <button class="border rounded-3xl font-semibold px-8 py-2 hover:bg-lavanda"
-            >Entre em Contato</button
-        >
+        </div>
     </div>
-</header>
+</nav>

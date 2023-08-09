@@ -9,7 +9,7 @@ export interface Props {
 const { title = "Bem Vindo!", description = "Página ?" } = Astro.props as Props;
 ---
 
-<html lang="pt-br">
+<html lang="pt-br" class="">
     <head>
         <!-- basic components -->
         <meta charset="utf-8" />
@@ -44,7 +44,7 @@ const { title = "Bem Vindo!", description = "Página ?" } = Astro.props as Props
         <meta name="description" content={description} />
     </head>
 
-    <body class="bg-marrom">
+    <body class="bg-fuchsia-100">
         <NavBar />
 
         <slot />
