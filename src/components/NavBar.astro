@@ -1,47 +1,55 @@
 ---
 import Image from "astro/components/Image.astro";
-import Logo from "../assets/images/logo-tecido-final.png";
+import shortLogo from "../assets/images/short-logo-rosa-e-roxo.png";
+import submarca from "../assets/images/submarca-roxo-e-rosa.png";
 ---
 
-<nav>
-    <div class="bg-fuchsia-100 shadow-md">
-        <div class="max-w-6xl mx-auto object-center w-full flex justify-between max-md:justify-center md:pl-24 py-5">
+<header>
+    <nav class="bg-fuchsia-200 shadow-md shadow-fuchsia-100">
+        <div
+            class="max-w-6xl mx-auto object-center w-full flex justify-between max-md:justify-center md:pl-20 py-0 max-md:py-6"
+        >
             <a href="/">
                 <Image
-                    src={Logo}
+                    src={shortLogo}
                     alt="Logo Buque Choco Rosas"
-                    class="max-sm:hidden lg:w-32 lg:h-20 max-md:hidden"
+                    class="md:w-40 md:h-20 max-md:hidden m-3"
+                />
+                <Image
+                    src={submarca}
+                    alt="Logo Buque Choco Rosas"
+                    class="md:hidden w-28 h-28 "
                 />
             </a>
             <ul class="flex items-center">
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight px-8 max-sm:border-hidden max-sm:px-4 transition duration-300"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 max-sm:hidden"
                 >
                     <a href="/">Início</a>
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-x border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-x border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 max-sm:pl-8 text-xl"
                 >
                     <a href="/projects">Links</a>
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 text-xl"
                 >
                     <a href="/tools">Produtos</a>
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 text-xl"
                 >
                     <a target="_blank" href="https://github.com/RaphMt117"
                         >Sobre</a
                     >
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-8 max-sm:border-hidden cursor-pointer max-sm:px-4 transition duration-300"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-8 max-sm:border-hidden cursor-pointer max-sm:px-4 transition duration-300 text-xl"
                 >
                     <a>Contato</a>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
