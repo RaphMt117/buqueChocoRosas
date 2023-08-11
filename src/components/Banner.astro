@@ -1,0 +1,42 @@
+---
+export interface Props {
+    heading?: string;
+    text?: string;
+    showExtra?: boolean;
+}
+
+const {
+    heading = "Heading Texttttt",
+    text = "afgajkjkcnbsoufhous iohfsdlanf flshdfljnsdoign klsjfhiasjipoas aslfhpoasf klasfh",
+    showExtra = false,
+} = Astro.props as Props;
+---
+
+<section class="h-auto p-48 bg-red-600">
+    <div class="max-w-4xl text-slate-800 text-center m-auto">
+        <h1 class="text-6xl mb-5 font-bold pb-7">
+            {heading}
+        </h1>
+        <p class="mb-5 text-3xl font-medium">
+            {text}
+        </p>
+    </div>
+
+    {
+        showExtra && (
+            <>
+                <div class="">
+                    <!-- <img class="logos" src={} alt="" /> -->
+                    <!-- <img class="logos-small" src={} alt="" /> -->
+                </div>
+
+                <p class="text-slate-700 text-center font-light">
+                    <small>
+                        Esta aba é sobre blablabla
+                    </small>
+                </p>
+            </>
+        )
+    }
+</section>
+

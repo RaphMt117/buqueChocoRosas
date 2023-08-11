@@ -11,14 +11,20 @@ import submarca from "../assets/images/submarca-roxo-e-rosa.png";
         >
             <a href="/">
                 <Image
+                    quality={"max"}
                     src={shortLogo}
                     alt="Logo Buque Choco Rosas"
                     class="md:w-40 md:h-20 max-md:hidden m-3"
+                    decoding="async"
+                    loading="lazy"
                 />
                 <Image
+                    quality={"max"}
                     src={submarca}
                     alt="Logo Buque Choco Rosas"
-                    class="md:hidden w-28 h-28 "
+                    class="md:hidden w-28 h-28 max-sm:h-16 max-sm:w-16"
+                    decoding="async"
+                    loading="eager"
                 />
             </a>
             <ul class="flex items-center">
@@ -28,24 +34,24 @@ import submarca from "../assets/images/submarca-roxo-e-rosa.png";
                     <a href="/">Início</a>
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-x border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 max-sm:pl-8 max-sm:text-xl"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-x border-neutral-600 md:px-7 max-sm:border-hidden max-sm:pr-2 transition duration-300 max-sm:pl-4 max-sm:text-lg"
                 >
                     <a href="/projects">Links</a>
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 max-sm:text-xl"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 md:px-6 max-sm:border-hidden max-sm:px-3 transition duration-300 max-sm:text-lg"
                 >
                     <a href="/tools">Produtos</a>
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 px-8 max-sm:border-hidden max-sm:px-4 transition duration-300 max-sm:text-xl"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 md:px-6 max-sm:border-hidden max-sm:px-2 transition duration-300 max-sm:text-lg"
                 >
                     <a target="_blank" href="https://github.com/RaphMt117"
                         >Sobre</a
                     >
                 </li>
                 <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-8 max-sm:border-hidden cursor-pointer max-sm:px-4 transition duration-300 max-sm:text-xl"
+                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-6 max-sm:border-hidden cursor-pointer max-sm:px-2 transition duration-300 max-sm:text-lg"
                 >
                     <a>Contato</a>
                 </li>
