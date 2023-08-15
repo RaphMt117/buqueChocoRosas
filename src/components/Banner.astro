@@ -1,6 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import Banner5 from '../assets/images/banner5.jpg'
+
+// general components
 export interface Props {
-    heading?: string;
+    heading: string;
     text?: string;
     showExtra?: boolean;
 }
@@ -12,12 +16,18 @@ const {
 } = Astro.props as Props;
 ---
 
-<section id="bg-img" class="h-auto p-48">
-    <div class="max-w-4xl text-white text-center m-auto brightness-100"> <!-- text-slate-800 -->
-        <h1 id="heading" class="text-6xl mb-5 font-bold pb-7">
+<Image 
+src={Banner5} 
+alt='Buque' 
+class="w-screen h-auto object-fill opacity-50" 
+
+/>
+<section id="bg-img" class="h-auto">
+    <div id="texto-titulo">
+        <h1 id="heading" class="text-6xl mb-5 font-bold pb-7 text-slate-700">
             {heading}
         </h1>
-        <p class="mb-5 text-3xl font-medium">
+        <p id="text-headind">
             {text}
         </p>
     </div>
@@ -40,3 +50,6 @@ const {
     }
 </section>
 
+<style>
+ 
+</style>
