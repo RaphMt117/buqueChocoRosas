@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets';
-import Banner5 from '../assets/images/banner5.jpg'
+import { Image } from "astro:assets";
+import Banner5 from "../assets/images/banner5.jpg";
 
 // general components
 export interface Props {
@@ -12,44 +12,22 @@ export interface Props {
 const {
     heading = "Heading Texttttt",
     text = "afgajkjkcnbsoufhous iohfsdlanf flshdfljnsdoign klsjfhiasjipoas aslfhpoasf klasfh",
-    showExtra = false,
 } = Astro.props as Props;
 ---
 
-<Image 
-src={Banner5} 
-alt='Buque' 
-class="w-screen h-auto object-fill opacity-50" 
-
-/>
-<section id="bg-img" class="h-auto">
-    <div id="texto-titulo">
-        <h1 id="heading" class="text-6xl mb-5 font-bold pb-7 text-slate-700">
+<section>
+    <Image
+        src={Banner5}
+        alt="Banner Buque"
+        class="w-screen h-auto object-fill brightness-[0.6]"
+    />
+    <div class="relative z-10 -mt-96 max-xl:-mt-60 max-md:-mt-44 max-sm:-mt-36 pt-0 w-screen text-center text-fuchsia-200 ">
+        <h1 class="text-6xl max-md:text-4xl mb-5 pt-10 max-w-4xl m-auto font-bold">
             {heading}
         </h1>
-        <p id="text-headind">
+        <p class="mb-5 text-3xl max-md:text-xl font-medium">
             {text}
         </p>
     </div>
-
-    {
-        showExtra && (
-            <>
-                <div class="">
-                    <!-- <img class="logos" src={} alt="" /> -->
-                    <!-- <img class="logos-small" src={} alt="" /> -->
-                </div>
-
-                <p class="text-slate-700 text-center font-light">
-                    <small>
-                        Esta aba é sobre blablabla
-                    </small>
-                </p>
-            </>
-        )
-    }
+    <div class="pb-52 max-xl:pb-14"></div>
 </section>
-
-<style>
- 
-</style>
