@@ -7,7 +7,7 @@ import { Icon } from "astro-icon";
     <div class="mx-auto w-full p-4 py-6">
         <div class="md:flex md:justify-center object-center">
             <div
-                class="grid grid-cols-3 gap-8 sm:gap-28 max-sm:grid-cols-2 m-1"
+                class="grid grid-cols-3 gap-8 sm:gap-28 max-sm:grid-cols-2 m-1 lg:px-40"
             >
                 <div>
                     <h2
@@ -97,51 +97,28 @@ import { Icon } from "astro-icon";
                     <div>
                         <a
                             href="#navbar"
-                            class="text-center flex border rounded-full bg-fuchsia-300 px-16 py-2"
+                            class="scroll-smooth text-center flex border rounded-full bg-fuchsia-300 px-16 py-2"
                         >
-                            <Icon
+                            <!-- <Icon
                                 name="seta"
-                                class="w-6 object-center text-neutral-700"
-                            />
+                                class="w-6 object-center text-neutral-700 max-lg:hidden"
+                            /> -->
                             <h2
-                                class="text-xl font-bold tracking-tight text-neutral-700 cursor-pointer px-3"
+                                class="text-xl font-bold tracking-tight text-neutral-700 cursor-pointer px-3 max-lg:hidden"
                             >
                                 Voltar para o topo
                             </h2>
+                            <h2
+                                class="text-xl font-bold tracking-tight text-neutral-700 cursor-pointer px-3 lg:hidden"
+                            >
+                                Topo
+                            </h2>
                             <Icon
                                 name="seta"
-                                class="w-6 object-center text-neutral-700"
+                                class="w-6 object-center text-neutral-700 lg:hidden"
                             />
                         </a>
                     </div>
-                    <!-- <ul class="font-medium">
-                        <li
-                            class="mb-4 flex text-neutral-700 hover:text-gray-900"
-                        >
-                            <Icon
-                                name="astroIcon"
-                                class="w-5 object-center pt-1"
-                            />
-                            <a
-                                href="https://astro.build/"
-                                target="_blank"
-                                class="hover:underline pl-1">Astro</a
-                            >
-                        </li>
-                        <li
-                            class="mb-4 flex text-neutral-700 hover:text-gray-900"
-                        >
-                            <Icon
-                                name="tailwindIcon"
-                                class="w-5 object-center pt-1"
-                            /> 
-                            <a
-                                href="https://tailwindcss.com/"
-                                target="_blank"
-                                class="hover:underline pl-1">Tailwind</a
-                            >
-                        </li>
-                    </ul> -->
                 </div>
             </div>
         </div>

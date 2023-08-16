@@ -19,13 +19,18 @@ const {
     <Image
         src={Banner5}
         alt="Banner Buque"
-        class="w-screen h-auto object-fill brightness-[0.6]"
+        quality= mid
+        class="w-screen h-auto object-fill brightness-[0.6] shadow-current shadow-sm"
     />
-    <div class="relative z-10 -mt-96 max-xl:-mt-60 max-md:-mt-44 max-sm:-mt-36 pt-0 w-screen text-center text-fuchsia-200 ">
-        <h1 class="text-6xl max-md:text-4xl mb-5 pt-10 max-w-4xl m-auto font-bold">
+    <div
+        class="relative z-10 -mt-96 max-xl:-mt-60 max-md:-mt-44 max-sm:mt-[-145px] max-md:pt-5 pt-0 w-screen text-center text-fuchsia-200"
+    >
+        <h1
+            class="text-6xl max-md:text-4xl mb-5 pt-10 max-w-4xl m-auto font-bold"
+        >
             {heading}
         </h1>
-        <p class="mb-5 text-3xl max-md:text-xl font-medium">
+        <p class="mb-5 text-3xl max-md:text-xl font-medium max-md:hidden">
             {text}
         </p>
     </div>
