@@ -2,6 +2,8 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import Image from "astro/components/Image.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
     return [
         {
@@ -44,7 +46,7 @@ const { name, desc } = Astro.props;
     <section class="mx-auto w-3/6">
         <Image
             src={produtos}
-            alt={name}
+            alt=`${name}`
             width="600"
             height="600"
             class="rounded"
