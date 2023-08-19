@@ -1,7 +1,52 @@
 ---
+import Icon from "astro-icon";
 import MainLayout from "../layouts/MainLayout.astro";
+import { links, mainContent, socialLinks } from "../links";
+import Image from "astro/components/Image.astro";
 ---
 
-<MainLayout title="links">
-
+<MainLayout title="Links úteis e contato!">
+    <section class="flex flex-col items-center min-h-[500px] p-9">
+        <div class="text-center pb-10 items-center flex-col col-span-1">
+            <!-- imagem precisa ser quadrada -->
+            <Image
+                class="border rounded-full justify-self-center"
+                width="162"
+                height="162"
+                src={mainContent.imgSrc}
+                alt={`Imagem de perfil de ${mainContent.name}`}
+            />
+            <h1 class="font-semibold text-2xl py-9">{mainContent.name}</h1>
+            <p class="font-medium text-base">{mainContent.desc}</p>
+            <ul class="grid grid-cols-2 pt-9">
+                {
+                    socialLinks.map((link) => (
+                        <li class="transition-transform hover:scale-[1.025] flex flex-col items-center">
+                            <a href={link.url}>
+                                <Icon
+                                    name={link.icon}
+                                    width="36px"
+                                    height="36px"
+                                />
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <ul class="w-full m-auto flex flex-col items-center">
+            {
+                links.map((link) => (
+                    <li class="flex w-3/4 max-w-md text-center bg-fuchsia-300 text-neutral-700 my-2 rounded-full transition-transform cursor-pointer hover:scale-[1.008] text-xl font-bold">
+                        <a
+                            class="py-4 w-full flex items-center justify-center"
+                            href={link.url}
+                        >
+                            {link.text}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 </MainLayout>
