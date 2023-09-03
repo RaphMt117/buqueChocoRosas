@@ -3,6 +3,7 @@ import Icon from 'astro-icon'
 import MainLayout from '../layouts/MainLayout.astro'
 import {links, mainContent, socialLinks} from '../links'
 import {Image} from 'astro:assets'
+import logo from '../assets/images/col-logo-rosa-e-roxo.png'
 ---
 
 <MainLayout title='Links úteis e contato!'>
@@ -13,7 +14,7 @@ import {Image} from 'astro:assets'
                 class='border rounded-full justify-self-center'
                 width='162'
                 height='162'
-                src={mainContent.imgSrc}
+                src={logo}
                 alt={`Imagem de perfil de ${mainContent.name}`}
             />
             <h1 class='font-semibold text-2xl py-9'>{mainContent.name}</h1>

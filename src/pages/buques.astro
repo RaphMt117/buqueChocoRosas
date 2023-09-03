@@ -1,0 +1,14 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import Banner from '../components/Banner.astro'
+import banner from '../assets/images/produtos-banner-buque.jpg'
+---
+
+<MainLayout>
+    <Banner
+        src={banner}
+        heading='Buquês'
+        transition:name='buque'
+    />
+
+</MainLayout>

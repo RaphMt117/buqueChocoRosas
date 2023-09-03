@@ -6,7 +6,7 @@ export interface Props {
     heading: string
     text?: string
     image?: string
-    src: ImageMetadata
+    src
 }
 
 const {
@@ -22,7 +22,8 @@ const {src} = Astro.props
         src={src}
         alt='Banner Buque'
         quality='mid'
-        class='relative w-fit h-auto object-fill brightness-[0.6] shadow-current shadow-sm'
+        class='relative brightness-[0.6] shadow-current shadow-sm'
+        height={1000}
     />
     <div
         class='absolute z-10 -mt-80 max-xl:-mt-60 max-md:-mt-44 max-sm:mt-[-145px] max-md:pt-5 pt-0 w-screen text-center text-fuchsia-200'>

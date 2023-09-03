@@ -1,18 +1,19 @@
 ---
 import {Image} from 'astro:assets'
 import Brigadeiros from '../assets/images/brigadeiros.jpg'
-import buque from '../assets/images/banner5.jpg'
+import produtosBuque from '../assets/images/produtos-buque.jpg'
 ---
+
+<!-- !!! Imagens: 650x400 -->
 
 <!-- Esquerda - Buquês -->
 <section class='px-20'>
-    <a href='/categorias/buques'>
+    <a href='/buques'>
         <div class='md:px-20 sm:px-20 max-sm:px-4 grid grid-cols-8 relative p-16'>
             <Image
-                src={buque}
+                src={produtosBuque}
                 alt='Categoria Brigadeiros'
                 class='rounded-2xl col-start-1 col-span-3 hover:scale-[101%] cursor-pointer duration-500'
-                transition:name='banner-buque'
             />
             <div
                 class='col-start-4 flex flex-col justify-center text-left space-y-8 absolute right-[700px] top-[180px]'>
