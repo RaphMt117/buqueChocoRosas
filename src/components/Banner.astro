@@ -6,17 +6,21 @@ import Banner5 from '../assets/images/banner5.jpg'
 export interface Props {
     heading: string
     text?: string
+    image?: string
+    src: ImageMetadata
 }
 
 const {
     heading = 'Heading Texttttt',
     text = 'afgajkjkcnbsoufhous iohfsdlanf flshdfljnsdoign klsjfhiasjipoas aslfhpoasf klasfh',
 } = Astro.props as Props
+
+const {src} = Astro.props
 ---
 
 <section>
     <Image
-        src={Banner5}
+        src={src}
         alt='Banner Buque'
         quality='mid'
         class='relative w-fit h-auto object-fill brightness-[0.6] shadow-current shadow-sm'

@@ -2,9 +2,10 @@
 import ProductsMenu from '../components/ProductsMenu.astro'
 import Banner from '../components/Banner.astro'
 import MainLayout from '../layouts/MainLayout.astro'
+import Brigadeiros from '../assets/images/banner5.jpg'
 ---
 
 <MainLayout title='Nossos Produtos!'>
-    <Banner heading='Conheça nossos produtos!' />
+    <Banner src={Brigadeiros} heading='Conheça nossos produtos!' />
     <ProductsMenu />
 </MainLayout>
