@@ -1,40 +1,40 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro'
-import Image from 'astro/components/Image.astro'
+import { Image } from 'astro:assets'
 
 export const prerender = true
 
 export async function getStaticPaths() {
-	return [
-		{
-			params: {produtos: 'Docinho1'},
-			props: {
-				name: 'docinho 1 ',
-				desc: 'esse docinho tem isso e isso e aquilo ',
-			},
-		},
-		{
-			params: {produtos: 'buquezinho1'},
-			props: {
-				name: 'buquezinho11 1 1',
-				desc: 'Evf fisb gusohgo olnshgp sl;gkn sp;gjnnpsgn snifbis dsihfoushng sljhsognsg  soghougndsfgou gongou',
-			},
-		},
-		{
-			params: {produtos: 'docinho2'},
-			props: {
-				name: 'docinho222',
-				desc: 'Tetfcybs sycvbsin  iuvbnsin v klvns;pmv s[vps,v [m [k m -k-vomfovmpo[sdf ompo mdfpombp[od ffom[ovmod[fm om [okmo[dfm,vofdmvo oshv08nvsionv pinvind pivns',
-			},
-		},
-		{
-			params: {produtos: 'buquezinho2'},
-			props: {
-				name: 'buquezzzzzzzzzz',
-				desc: 'esse docinho conta com oashoi dfhpj lkfhp spihspim jpismf ipjgpismfphn pgspoif pijsgpm',
-			},
-		},
-	]
+    return [
+        {
+            params: {produtos: 'Docinho1'},
+            props: {
+                name: 'docinho 1 ',
+                desc: 'esse docinho tem isso e isso e aquilo ',
+            },
+        },
+        {
+            params: {produtos: 'buquezinho1'},
+            props: {
+                name: 'buquezinho11 1 1',
+                desc: 'Evf fisb gusohgo olnshgp sl;gkn sp;gjnnpsgn snifbis dsihfoushng sljhsognsg  soghougndsfgou gongou',
+            },
+        },
+        {
+            params: {produtos: 'docinho2'},
+            props: {
+                name: 'docinho222',
+                desc: 'Tetfcybs sycvbsin  iuvbnsin v klvns;pmv s[vps,v [m [k m -k-vomfovmpo[sdf ompo mdfpombp[od ffom[ovmod[fm om [okmo[dfm,vofdmvo oshv08nvsionv pinvind pivns',
+            },
+        },
+        {
+            params: {produtos: 'buquezinho2'},
+            props: {
+                name: 'buquezzzzzzzzzz',
+                desc: 'esse docinho conta com oashoi dfhpj lkfhp spihspim jpismf ipjgpismfphn pgspoif pijsgpm',
+            },
+        },
+    ]
 }
 
 const {produtos} = Astro.params
@@ -42,16 +42,16 @@ const {name, desc} = Astro.props
 ---
 
 <MainLayout title=`${name}`>
-	<section class='mx-auto w-3/6'>
-		<Image
-			src={produtos}
-			alt=`${name}`
-			width='600'
-			height='600'
-			class='rounded'
-		/>
-		<h1 class='font-bold mt-4'>{name}</h1>
-		<p>{desc}</p>
-		<section></section>
-	</section>
+    <section class='mx-auto w-3/6'>
+        <Image
+            src={produtos}
+            alt=`${name}`
+            width='600'
+            height='600'
+            class='rounded'
+        />
+        <h1 class='font-bold mt-4'>{name}</h1>
+        <p>{desc}</p>
+        <section></section>
+    </section>
 </MainLayout>
