@@ -1,0 +1,131 @@
+---
+import Buque from '../assets/images/banner4.jpg'
+import Brigadeiros from '../assets/images/banner3.jpg'
+import Presentes from '../assets/images/banner2.jpg'
+import Trufas from '../assets/images/banner1.jpg'
+import {Image} from 'astro:assets'
+---
+
+<div class='flex items-center justify-center'>
+    <div class='grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4'>
+        <div
+            class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30'>
+            <div class='h-96 w-72'>
+                <Image
+                    class='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110'
+                    src={Buque}
+                    alt='Buque de morango com chocolate'
+                />
+            </div>
+            <div
+                class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70'>
+            </div>
+            <div
+                class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
+                <h1 class='font-dmserif text-3xl font-bold text-white'>Buquês</h1>
+                <p
+                    class='mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                    buque buque buque buquebuque buque buque buque buque buque buque buque buque
+                    buque buque buque buque buque
+                </p>
+                <button
+                    class='rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60'
+                    >Saiba Mais</button
+                >
+            </div>
+        </div>
+
+        <!-- Card Brigadeiros -->
+        <a href='/brigadeiros'>
+            <div
+                class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30'>
+                <div class='h-96 w-72'>
+                    <Image
+                        class='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110'
+                        src={Brigadeiros}
+                        alt='teste'
+                    />
+                </div>
+                <div
+                    class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70'>
+                </div>
+                <div
+                    class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
+                    <h1 class='font-dmserif text-3xl font-bold text-white'>Brigadeiros</h1>
+                    <p
+                        class='mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                        Brigadeiros Brigadeiros Brigadeiros Brigadeiros Brigadeiros Brigadeiros
+                        Brigadeiros Brigadeiros Brigadeiros Brigadeiros
+                    </p>
+                    <button
+                        class='rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60'
+                        >Saiba Mais</button
+                    >
+                </div>
+            </div>
+        </a>
+        <!-- Fim Card Brigadeiros -->
+
+        <!-- Card Presentes -->
+        <a href='/presentes'>
+            <div
+                class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30'>
+                <div class='h-96 w-72'>
+                    <Image
+                        class='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110'
+                        src={Presentes}
+                        alt=''
+                    />
+                </div>
+                <div
+                    class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70'>
+                </div>
+                <div
+                    class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
+                    <h1 class='font-dmserif text-3xl font-bold text-white'>Presentes</h1>
+                    <p
+                        class='mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                        Presentes presentes presentes presentes presentes presentes presentes
+                        presentes presentes
+                    </p>
+                    <button
+                        class='rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60'
+                        >Saiba Mais</button
+                    >
+                </div>
+            </div>
+        </a>
+        <!-- Fim Card Presentes -->
+
+        <!-- Card Trufas -->
+        <a href='/trufas'>
+            <div
+                class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30'>
+                <div class='h-96 w-72'>
+                    <Image
+                        class='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110'
+                        src={Trufas}
+                        alt=''
+                    />
+                </div>
+                <div
+                    class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70'>
+                </div>
+                <div
+                    class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
+                    <h1 class='font-dmserif text-3xl font-bold text-white'>Trufas</h1>
+                    <p
+                        class='mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                        Trufas trufas trufas trufas trufas trufas trufas trufas trufas trufas trufas
+                        trufas trufas trufas trufas trufas trufas
+                    </p>
+                    <button
+                        class='rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60'
+                        >Saiba Mais</button
+                    >
+                </div>
+            </div>
+        </a>
+        <!-- fim Card Trufas -->
+    </div>
+</div>
