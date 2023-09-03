@@ -3,43 +3,43 @@ import NavBar from '../components/NavBar.astro'
 import Footer from '../components/Footer.astro'
 import {ViewTransitions} from 'astro:transitions'
 export interface Props {
-	title?: string
-	description?: string
+    title?: string
+    description?: string
 }
 
 const {title = 'Bem Vindo!', description = 'Página ?'} = Astro.props as Props
 ---
 
 <html
-	lang='pt-br'
-	class='scroll-smooth w-screen'>
-	<head>
-		<!-- basic components -->
-		<meta charset='utf-8' />
+    lang='pt-br'
+    class='scroll-smooth w-screen'>
+    <head>
+        <!-- basic components -->
+        <meta charset='utf-8' />
 
-		<!-- basic components -->
-		<meta
-			name='viewport'
-			content='width=device-width'
-		/>
-		<meta
-			name='generator'
-			content={Astro.generator}
-		/>
-		<!-- title and description -->
-		<title>{title}</title>
-		<meta
-			name='description'
-			content={description}
-		/>
+        <!-- basic components -->
+        <meta
+            name='viewport'
+            content='width=device-width'
+        />
+        <meta
+            name='generator'
+            content={Astro.generator}
+        />
+        <!-- title and description -->
+        <title>{title}</title>
+        <meta
+            name='description'
+            content={description}
+        />
 
-		<!-- View Transitions Astro -->
-		<ViewTransitions />
-	</head>
+        <!-- View Transitions Astro -->
+        <ViewTransitions />
+    </head>
 
-	<body class='bg-fuchsia-100'>
-		<NavBar />
-		<slot />
-		<Footer />
-	</body></html
->
+    <body class='bg-fuchsia-100 relative'>
+        <NavBar />
+        <slot />
+        <Footer />
+    </body>
+</html>

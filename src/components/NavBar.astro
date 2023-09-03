@@ -5,50 +5,53 @@ import submarca from '../assets/images/submarca-roxo-e-rosa.png'
 ---
 
 <header>
-	<nav id='navbar' class='bg-fuchsia-200 shadow-md shadow-fuchsia-100'>
-		<div
-			class='max-w-6xl mx-auto object-center w-full flex justify-between max-md:justify-center md:pl-20 py-0 max-md:py-6'>
-			<a href='/'>
-				<Image
-					quality={'max'}
-					src={shortLogo}
-					alt='Logo Buque Choco Rosas'
-					class='md:w-40 md:h-20 max-md:hidden m-3'
-					decoding='async'
-					loading='lazy'
-				/>
-				<Image
-					quality={'max'}
-					src={submarca}
-					alt='Logo Buque Choco Rosas'
-					class='md:hidden w-28 h-28 max-sm:h-16 max-sm:w-16'
-					decoding='async'
-					loading='eager'
-				/>
-			</a>
-			<ul class='flex items-center'>
-				<li
-					class='font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight px-8 max-md:border-hidden max-md:px-4 transition duration-300 max-sm:hidden max-md:text-lg'>
-					<a href='/'>Início</a>
-				</li>
-				<li
-					class='font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-x border-neutral-600 md:px-7 max-md:border-hidden max-md:pr-2 transition duration-300 max-sm:pl-4 max-md:text-lg'>
-					<a href='/links'>Links</a>
-				</li>
-				<li
-					class='font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-r border-neutral-600 md:px-6 max-md:border-hidden max-md:px-3 transition duration-300 max-md:text-lg'>
-					<a href='/produtos'>Produtos</a>
-				</li>
-				<li
-					class='font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 md:px-6 max-md:border-hidden max-md:px-2 transition duration-300 max-md:text-lg'>
-					<a href='/sobre'>Sobre</a>
-				</li>
-				<!-- <li
+    <nav
+        id='navbar'
+        class='bg-fuchsia-200 shadow-md shadow-fuchsia-100'>
+        <div
+            class='max-w-6xl mx-auto object-center w-full flex justify-between max-md:justify-center md:pl-20 py-0 max-md:py-6'>
+            <a href='/'>
+                <Image
+                    quality={'max'}
+                    src={shortLogo}
+                    alt='Logo Buque Choco Rosas'
+                    class='md:w-40 md:h-20 max-md:hidden m-3'
+                    decoding='async'
+                    loading='lazy'
+                />
+                <Image
+                    quality={'max'}
+                    src={submarca}
+                    alt='Logo Buque Choco Rosas'
+                    class='md:hidden w-28 h-28 max-sm:h-16 max-sm:w-16'
+                    decoding='async'
+                    loading='eager'
+                />
+            </a>
+            <ul
+                class='flex items-center divide-x-2 divide-neutral-500 text-neutral-600 font-bold tracking-widest transition-transform duration-500'>
+                <li
+                    class='hover:text-neutral-900 hover:underline px-8 max-md:border-hidden max-md:px-4 transition duration-300 max-sm:hidden max-md:text-lg'>
+                    <a href='/'>Início</a>
+                </li>
+                <li
+                    class='hover:text-neutral-900 hover:underline md:px-7 max-md:border-hidden max-md:pr-2 transition duration-300 max-sm:pl-4 max-md:text-lg'>
+                    <a href='/links'>Links</a>
+                </li>
+                <li
+                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:border-hidden max-md:px-3 transition duration-300 max-md:text-lg'>
+                    <a href='/produtos'>Produtos</a>
+                </li>
+                <li
+                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:border-hidden max-md:px-2 transition duration-300 max-md:text-lg'>
+                    <a href='/sobre'>Sobre</a>
+                </li>
+                <!-- <li
                     class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-6 max-md:border-hidden cursor-pointer max-md:px-2 transition duration-300 max-md:text-lg"
                 >
                     <a>Contato</a>
                 </li> -->
-			</ul>
-		</div>
-	</nav>
+            </ul>
+        </div>
+    </nav>
 </header>
