@@ -9,66 +9,102 @@ import produtosBuque from '../assets/images/produtos-buque.jpg'
     <!-- Esquerda - Buquês -->
     <div class='px-20'>
         <a href='/buques'>
-            <div class='md:px-20 sm:px-20 max-sm:px-4 grid grid-cols-8 relative px-16 py-3 group'>
+            <div
+                class='flex max-lg:flex-col align-middle items-center space-x-10 max-lg:space-x-0 lg:px-30 md:px-10 sm:px-10 max-sm:px-2 py-3 group'>
                 <Image
                     src={produtosBuque}
                     alt='Categoria Brigadeiros'
-                    class='rounded-2xl col-start-1 col-span-3 hover:scale-[101%] cursor-pointer duration-500'
+                    class='rounded-2xl group-hover:scale-[101%] cursor-pointer duration-500'
+                    height={400}
+                    width={650}
+                    quality={'mid'}
                 />
-                <div
-                    class='col-start-4 flex flex-col justify-center text-left space-y-8 absolute right-[700px] top-[180px]'>
-                    <h1 class='font-semibold text-8xl text-slate-800'>Buquês</h1>
+                <a
+                    href='/buques'
+                    class='flex flex-col max-lg:justify-center text-left max-lg:text-center space-y-8 max-lg:space-y-3'>
+                    <h1
+                        class='font-semibold text-8xl max-lg:text-5xl justify-center text-slate-800 max-lg:pt-2'>
+                        Buquês
+                    </h1>
                     <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
-                </div>
+                </a>
             </div>
         </a>
     </div>
 
     <!-- Direita - Presentes -->
     <div class='px-20'>
-        <div class='md:px-20 sm:px-20 max-sm:px-4 grid grid-cols-8 relative px-16 py-3'>
+        <a href='/presentes'>
             <div
-                class='flex flex-col justify-center text-right space-y-8 absolute right-[710px] top-[180px]'>
-                <h1 class='font-semibold text-8xl text-slate-800'>Presentes</h1>
-                <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
+                class='flex flex-row-reverse align-middle items-center max-lg:flex-col lg:px-10 md:px-10 sm:px-10 max-sm:px-2 py-3'>
+                <Image
+                    src={Brigadeiros}
+                    alt='Categoria Brigadeiros'
+                    class='rounded-2xl hover:scale-[101%] cursor-pointer duration-500'
+                    height={400}
+                    width={650}
+                    quality={'mid'}
+                />
+                <div
+                    class='flex flex-col justify-center text-right max-lg:text-center space-y-8 max-lg:space-y-3 pr-10 max-lg:pr-0'>
+                    <h1
+                        class='font-semibold text-8xl max-lg:text-5xl justify-center text-slate-800 max-lg:pt-2'>
+                        Presentes
+                    </h1>
+                    <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
+                </div>
             </div>
-            <Image
-                src={Brigadeiros}
-                alt='Categoria Brigadeiros'
-                class='rounded-2xl col-start-6 col-span-3 hover:scale-[101%] cursor-pointer duration-500'
-            />
-        </div>
+        </a>
     </div>
 
     <!-- Esquerda - Trufas -->
     <div class='px-20'>
-        <div class='md:px-20 sm:px-20 max-sm:px-4 grid grid-cols-8 relative px-16 py-3'>
-            <Image
-                src={Brigadeiros}
-                alt='Categoria Brigadeiros'
-                class='rounded-2xl col-start-1 col-span-3 hover:scale-[101%] cursor-pointer duration-500'
-            />
+        <a href='/trufas'>
             <div
-                class='col-start-4 flex flex-col justify-center text-left space-y-8 absolute right-[700px] top-[180px]'>
-                <h1 class='font-semibold text-8xl text-slate-800'>Trufas</h1>
-                <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
+                class='flex max-lg:flex-col align-middle items-center space-x-10 max-lg:space-x-0 lg:px-30 md:px-10 sm:px-10 max-sm:px-2 py-3 group'>
+                <Image
+                    src={produtosBuque}
+                    alt='Categoria Brigadeiros'
+                    class='rounded-2xl group-hover:scale-[101%] cursor-pointer duration-500'
+                    height={400}
+                    width={650}
+                    quality={'mid'}
+                />
+                <a
+                    href='/buques'
+                    class='flex flex-col max-lg:justify-center text-left max-lg:text-center space-y-8 max-lg:space-y-3'>
+                    <h1
+                        class='font-semibold text-8xl max-lg:text-5xl justify-center text-slate-800 max-lg:pt-2'>
+                        Trufas
+                    </h1>
+                    <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
+                </a>
             </div>
-        </div>
+        </a>
     </div>
 
     <!-- Direita - Brigadeiros -->
     <div class='px-20'>
-        <div class='md:px-20 sm:px-20 max-sm:px-4 grid grid-cols-8 relative px-16 py-3'>
+        <a href='/brigadeiros'>
             <div
-                class='flex flex-col justify-center text-right space-y-8 absolute right-[710px] top-[180px]'>
-                <h1 class='font-semibold text-8xl text-slate-800'>Brigadeiros</h1>
-                <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
+                class='flex flex-row-reverse align-middle items-center max-lg:flex-col lg:px-10 md:px-10 sm:px-10 max-sm:px-2 py-3'>
+                <Image
+                    src={Brigadeiros}
+                    alt='Categoria Brigadeiros'
+                    class='rounded-2xl hover:scale-[101%] cursor-pointer duration-500'
+                    height={400}
+                    width={650}
+                    quality={'mid'}
+                />
+                <div
+                    class='flex flex-col justify-center text-right max-lg:text-center space-y-8 max-lg:space-y-3 pr-10 max-lg:pr-0'>
+                    <h1
+                        class='font-semibold text-8xl max-lg:text-5xl justify-center text-slate-800 max-lg:pt-2'>
+                        Brigadeiros
+                    </h1>
+                    <h1 class=''>Conheça nossos brigadeiros! São docinhos especiais</h1>
+                </div>
             </div>
-            <Image
-                src={Brigadeiros}
-                alt='Categoria Brigadeiros'
-                class='rounded-2xl col-start-6 col-span-3 hover:scale-[101%] cursor-pointer duration-500'
-            />
-        </div>
+        </a>
     </div>
 </section>

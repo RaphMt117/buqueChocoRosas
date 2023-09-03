@@ -30,4 +30,20 @@ export const links = [
         text: 'Sobre',
         url: '/sobre',
     },
+    {
+        text: 'Buquês',
+        url: '/buques',
+    },
+    {
+        text: 'Brigadeiros',
+        url: '/brigadeiros',
+    },
+    {
+        text: 'Trufas',
+        url: '/trufas',
+    },
+    {
+        text: 'Presentes',
+        url: '/presentes',
+    },
 ]
