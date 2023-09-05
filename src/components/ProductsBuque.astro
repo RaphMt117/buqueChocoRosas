@@ -1,27 +1,133 @@
 ---
 import {Image} from 'astro:assets'
-import Docinho1 from '../assets/images/docinho1.jpg'
-import {buques} from '../products'
 
+// images
+import Docinho1 from '../assets/images/docinho1.jpg'
+import Brigadeiro from '../assets/images/brigadeiros.jpg'
 ---
 
 <div class='w-8/12 lg:w-9/12 max-lg:w-5/6 mx-auto'>
     <div
         class='grid md:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-14 mx-2 gap-12 drop-shadow-[0px_8px_15px_rgba(192,38,211,0.2)] pt-20 max-md:pt-2'>
-        {
-            buques.map((buque) => (
-                <a href='/produtos/Docinho1'>
-                    <Image
-                        class='rounded'
-                        src={`../assets/images/${buque.image}`}
-                        alt='docinho 1'
-                        width='300'
-                        height='300'
-                    />
-                    <h2>{buque.nome}</h2>
-                </a>
-            ))
-        }
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded'
+                src={Docinho1}
+                alt='docinho 1'
+                width='300'
+                height='300'
+            />
+            <h2>teste</h2>
+        </a>
+        <a href='/produtos/brigadeiro'
+            ><Image
+                class='rounded'
+                src={Brigadeiro}
+                alt='buquezinho 1'
+                width='300'
+                height='300'
+            />
+            <h2>Brigadeiro</h2>
+        </a>
+        <a href='/produtos/buquezinho2'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='buquezinho 2'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/docinho2'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='docinho 2'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
+        <a href='/produtos/Docinho1'
+            ><Image
+                class='rounded-md'
+                src={Docinho1}
+                alt='tt'
+                width='300'
+                height='300'
+            />
+            <h2>Nome do produto</h2>
+        </a>
     </div>
 </div>
-

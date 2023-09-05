@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro'
 import {Image} from 'astro:assets'
+import { buques } from '../../products'
 
 export const prerender = true
 
@@ -9,14 +10,14 @@ export async function getStaticPaths() {
         {
             params: {produtos: 'Docinho1'},
             props: {
-                name: 'docinho 1 ',
+                name: 'Teeste nome produto',
                 desc: 'esse docinho tem isso e isso e aquilo ',
             },
         },
         {
-            params: {produtos: 'buquezinho1'},
+            params: {produtos: 'brigadeiro'},
             props: {
-                name: 'buquezinho11 1 1',
+                name: 'Brigadeiro delicia',
                 desc: 'Evf fisb gusohgo olnshgp sl;gkn sp;gjnnpsgn snifbis dsihfoushng sljhsognsg  soghougndsfgou gongou',
             },
         },

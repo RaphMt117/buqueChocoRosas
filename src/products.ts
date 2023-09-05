@@ -3,8 +3,8 @@ export const buques = [
         id: '101',
         nome: 'Buque de Chocolate',
         desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 64.90,
-        image: 'buque-chocolate.jpg',
+        preco: '64.90',
+        image: 'teste',
         ingredientes: ['Côco', 'Chocolate', 'Baunilha']
     },
     {
@@ -12,7 +12,7 @@ export const buques = [
         nome: 'Buque de teste teste',
         desc: 'Um delicioso buque de chocolate nhamnham',
         preco: 67.90,
-        image: 'buque-chocolate',
+        image: '',
         ingredientes: ['Côco', 'Chocolate', 'Baunilha']
     },
     {
