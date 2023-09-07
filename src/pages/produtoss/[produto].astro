@@ -1,0 +1,42 @@
+---
+import {buquesMorango} from '../../products'
+import MainLayout from '../../layouts/MainLayout.astro'
+
+export async function getStaticPaths() {
+    return buquesMorango.map((buque) => {
+        return {
+            params: {produto: buque.id},
+            props: {
+                nome: buque.nome,
+                image: buque.image,
+                preco: buque.preco,
+                desc: buque.desc,
+                intro: buque.intro,
+                obs: buque.obs,
+                categoria: buque.categoria,
+            },
+        }
+    })
+}
+
+const {produto} = Astro.params
+const {image, nome, desc, preco, intro, obs, categoria} = Astro.props
+---
+
+<MainLayout title={nome}>
+    <section class='mx-auto w-3/6'>
+        <img
+            src={image}
+            alt={nome}
+            width='600'
+            height='600'
+            class='rounded'
+        />
+        <h1 class='font-bold mt-4'>nome: {nome}</h1>
+        <p>intro: {intro}</p>
+        <p>desc: {desc}</p>
+        <p>preço: {preco}</p>
+        <p>obs: {obs}</p>
+        <p>categoria: {categoria}</p>
+    </section>
+</MainLayout>

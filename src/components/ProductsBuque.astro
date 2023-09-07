@@ -3,44 +3,46 @@ import {buquesMorango} from '../products'
 import {Icon} from 'astro-icon'
 ---
 
-<h1 class='text-center font-semibold text-7xl py-12'>Buquê de Morangos</h1>
+<!-- Buques de Morango -->
+<h1 class='text-center font-semibold text-7xl py-12'>Buquês de Morangos</h1>
 <div class='flex items-center justify-center'>
     <div class='grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5'>
         {
             buquesMorango.map((buque) => (
-                <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30'>
-                    <div class='h-96 w-72'>
-                        <img
-                            class='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
-                            src={buque.image}
-                            alt='Buque'
-                        />
-                    </div>
-                    <div class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-fuchsia-950 group-hover:from-fuchsia-950/70 group-hover:via-black/60 group-hover:to-fuchsia-950/70 transition-all transform' />
-                    <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
-                        <h1 class='font-dmserif text-3xl font-bold text-white pb-5'>
-                            {buque.nome}
-                        </h1>
-                        <p class='mb-3 text-lg font-semibold italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
-                            ${}
-                            {buque.desc1}
+                <a href={`/produtoss/${buque.id}`}>
+                    <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30'>
+                        <div class='h-96 w-72'>
+                            <img
+                                class='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
+                                src={buque.image}
+                                alt={buque.nome}
+                            />
+                        </div>
+                        <div class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-fuchsia-950 group-hover:from-fuchsia-950/70 group-hover:via-black/60 group-hover:to-fuchsia-950/70 transition-all transform' />
+                        <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
+                            <h1 class='font-dmserif text-3xl font-bold text-white pb-5'>
+                                {buque.nome}
+                            </h1>
+                            <p class='mb-3 text-lg font-semibold italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                                {buque.desc[0]}
+                                <br />
+                                {buque.desc[1]}
+                                <br />
+                                {buque.desc[2]}
+                            </p>
+                            <Icon
+                                class='z-10 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100'
+                                name={buque.categoria}
+                                width='32px'
+                                height='32px'
+                            />
                             <br />
-                            {buque.desc2}
-                            <br>
-                            {buque.desc3}
-                        </p>
-                        <Icon
-                            class='z-10 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100'
-                            name={buque.categoria}
-                            width='32px'
-                            height='32px'
-                        />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
                     </div>
-                </div>
+                </a>
             ))
         }
     </div>
