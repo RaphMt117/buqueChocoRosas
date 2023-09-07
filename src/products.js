@@ -13,7 +13,7 @@ export const buquesMorango = [
         ],
         cartao: true,
         preco: '65,00',
-        image: '/public/buques/mimo.jpg',
+        image: '/buques/mimo.jpg',
         categoria: 'morango',
     },
     {
@@ -29,7 +29,7 @@ export const buquesMorango = [
         ],
         cartao: true,
         preco: '150,00',
-        image: '/public/buques/euTeAmo.jpg',
+        image: '/buques/euTeAmo.jpg',
         categoria: 'morango',
     },
     {
@@ -46,7 +46,7 @@ export const buquesMorango = [
         ],
         cartao: true,
         preco: '140,00',
-        image: '/public/buques/seducao.jpg',
+        image: '/buques/seducao.jpg',
         categoria: 'morango',
     },
     {
@@ -61,7 +61,7 @@ export const buquesMorango = [
         ],
         cartao: true,
         preco: '110,00',
-        image: '/public/buques/chamego.jpg',
+        image: '/buques/chamego.jpg',
         categoria: 'morango',
     },
     {
@@ -77,7 +77,7 @@ export const buquesMorango = [
         ],
         cartao: true,
         preco: '190,00',
-        image: '/public/buques/paixao.jpg',
+        image: '/buques/paixao.jpg',
         categoria: 'morango',
     },
 ]
