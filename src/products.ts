@@ -1,74 +1,56 @@
-export const buques = [
+export const buquesMorango = [
     {
-        id: '101',
-        nome: 'Buque de Chocolate',
-        desc: 'Um delicioso buque de chocolate nhamnham',
+        id: '',
+        nome: 'Mimo',
+        desc: ['- 5 morangos', '- 2 rosas'],
+        desc1: '- 5 morangos banhados com chocolate',
+        desc2: '- 2 rosas',
+        desc3: '',
+        desc4: '',
+        desc5: '',
+        desc6: '',
         preco: '64.90',
-        image: 'teste',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
+        image: '/buques/docinho1.jpg',
+        categoria: 'morango',
+        ingredientes: ['Côco', 'Chocolate', 'Baunilha'],
     },
     {
-        id: '102',
-        nome: 'Buque de teste teste',
-        desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 67.90,
-        image: '',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
+        id: '',
+        nome: 'Eu Te Amo',
+        desc1: '- 5 morangos banhados com chocolate',
+        desc2: '- 2 rosas',
+        desc3: 'Um delicioso buque de chocolate nhamnham',
+        desc4: '',
+        desc5: '',
+        desc6: '',
+        preco: 67.9,
+        image: '/buques/brigadeiros.jpg',
+        categoria: 'docinhos',
+        ingredientes: ['Côco', 'Chocolate', 'Baunilha'],
     },
     {
-        id: '103',
-        nome: 'Buque de teste teste teste',
+        id: '',
+        nome: 'Sedução',
         desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 65.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
+        preco: 65.9,
+        image: '/buques/docinho1.jpg',
+        categoria: 'bombom',
+        ingredientes: ['Côco', 'Chocolate', 'Baunilha'],
     },
     {
         id: '104',
-        nome: 'Buque quatro',
+        nome: 'Chamego',
         desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 62.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
+        preco: 62.9,
+        image: '/buques/brigadeiros.jpg',
+        ingredientes: ['Côco', 'Chocolate', 'Baunilha'],
     },
     {
         id: '105',
-        nome: 'Buque de Chocolate',
+        nome: 'Paixão',
         desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 61.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
-    },
-    {
-        id: '106',
-        nome: 'Buque de Chocolate',
-        desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 64.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
-    },
-    {
-        id: '107',
-        nome: 'Buque de Chocolate',
-        desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 64.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
-    },
-    {
-        id: '108',
-        nome: 'Buque de Chocolate',
-        desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 64.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
-    },
-    {
-        id: '109',
-        nome: 'Buque de Chocolate',
-        desc: 'Um delicioso buque de chocolate nhamnham',
-        preco: 64.90,
-        image: 'buque-chocolate',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha']
+        preco: 61.9,
+        image: '/buques/docinho1.jpg',
+        ingredientes: ['Côco', 'Chocolate', 'Baunilha'],
     },
 ]

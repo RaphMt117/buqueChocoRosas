@@ -1,133 +1,47 @@
 ---
-import {Image} from 'astro:assets'
-
-// images
-import Docinho1 from '../assets/images/docinho1.jpg'
-import Brigadeiro from '../assets/images/brigadeiros.jpg'
+import {buquesMorango} from '../products'
+import {Icon} from 'astro-icon'
 ---
 
-<div class='w-8/12 lg:w-9/12 max-lg:w-5/6 mx-auto'>
-    <div
-        class='grid md:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:px-14 mx-2 gap-12 drop-shadow-[0px_8px_15px_rgba(192,38,211,0.2)] pt-20 max-md:pt-2'>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded'
-                src={Docinho1}
-                alt='docinho 1'
-                width='300'
-                height='300'
-            />
-            <h2>teste</h2>
-        </a>
-        <a href='/produtos/brigadeiro'
-            ><Image
-                class='rounded'
-                src={Brigadeiro}
-                alt='buquezinho 1'
-                width='300'
-                height='300'
-            />
-            <h2>Brigadeiro</h2>
-        </a>
-        <a href='/produtos/buquezinho2'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='buquezinho 2'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/docinho2'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='docinho 2'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
-        <a href='/produtos/Docinho1'
-            ><Image
-                class='rounded-md'
-                src={Docinho1}
-                alt='tt'
-                width='300'
-                height='300'
-            />
-            <h2>Nome do produto</h2>
-        </a>
+<h1 class='text-center font-semibold text-7xl py-12'>Buquê de Morangos</h1>
+<div class='flex items-center justify-center'>
+    <div class='grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5'>
+        {
+            buquesMorango.map((buque) => (
+                <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30'>
+                    <div class='h-96 w-72'>
+                        <img
+                            class='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
+                            src={buque.image}
+                            alt='Buque'
+                        />
+                    </div>
+                    <div class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-fuchsia-950 group-hover:from-fuchsia-950/70 group-hover:via-black/60 group-hover:to-fuchsia-950/70 transition-all transform' />
+                    <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
+                        <h1 class='font-dmserif text-3xl font-bold text-white pb-5'>
+                            {buque.nome}
+                        </h1>
+                        <p class='mb-3 text-lg font-semibold italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                            ${}
+                            {buque.desc1}
+                            <br />
+                            {buque.desc2}
+                            <br>
+                            {buque.desc3}
+                        </p>
+                        <Icon
+                            class='z-10 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100'
+                            name={buque.categoria}
+                            width='32px'
+                            height='32px'
+                        />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            ))
+        }
     </div>
 </div>
