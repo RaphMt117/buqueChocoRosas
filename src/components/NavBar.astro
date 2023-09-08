@@ -1,49 +1,95 @@
 ---
 import {Image} from 'astro:assets'
 import shortLogo from '../assets/images/short-logo-rosa-e-roxo.png'
-import submarca from '../assets/images/submarca-roxo-e-rosa.png'
+import Icon from 'astro-icon'
+import {links} from '../links'
 ---
 
+<script>
+    inicializarMenu()
+
+    function abrirMenu() {
+        document.getElementById('menu').classList.remove('left-[-500px]')
+        document.getElementById('menu').classList.add('left-0')
+    }
+    function fecharMenu() {
+        document.getElementById('menu').classList.remove('left-0')
+        document.getElementById('menu').classList.add('left-[-500px]')
+    }
+    // Separando botões para abrir e fechar carrinho pela tag
+    function inicializarMenu() {
+        const botaoFecharMenu = document.getElementById('fechar-menu')
+        const botaoAbrirMenu = document.getElementById('abrir-menu')
+
+        botaoFecharMenu.addEventListener('click', fecharMenu)
+        botaoAbrirMenu.addEventListener('click', abrirMenu)
+    }
+</script>
+
 <header>
+    <section
+        id='menu'
+        class='fixed top-0 left-[-500px] bg-fuchsia-600/80 h-screen w-5/6 md:hidden text-slate-300 z-50 duration-300 border-r border-fuchsia-700 pt-4 px-3 flex flex-col'>
+        <div class='text-fuchsia-900 m-1'>
+            <Icon
+                id='fechar-menu'
+                name='seta'
+                class='-rotate-90'
+                width='36'
+            />
+        </div>
+        <ul class='w-full flex flex-col items-start pt-6'>
+            {
+                links.map((link) => (
+                    <li class='flex w-2/3 text-left bg-gradient-to-r from-fuchsia-400 to-transparent text-neutral-800 border-b border-l border-fuchsia-300 rounded-bl-md my-2 text-xl font-medium'>
+                        <a
+                            class='py-4 w-full flex items-start pl-5'
+                            href={link.url}>
+                            {link.text}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+        <div class='flex justify-between m-3'></div>
+    </section>
     <nav
         id='navbar'
-        class='bg-fuchsia-200 shadow-md shadow-fuchsia-100'>
+        class='bg-fuchsia-200 shadow-md shadow-fuchsia-100 w-full flex justify-between max-md:p-0'>
         <div
-            class='max-w-6xl mx-auto object-center w-full flex justify-between max-md:justify-center md:pl-20 py-0 max-md:py-6'>
+            class='max-w-6xl mx-auto object-center w-full flex justify-between md:pl-20 py-0 text-fuchsia-700 max-md:p-3'>
+            <div id="abrir-menu" class="md:hidden">
+                <Icon
+                    name='menu'
+                    class='w-10 h-10'
+                />
+            </div>
             <a href='/'>
                 <Image
-                    quality={'max'}
+                    quality={'mid'}
                     src={shortLogo}
                     alt='Logo Buque Choco Rosas'
-                    class='md:w-40 md:h-20 max-md:hidden m-3'
+                    class='md:w-40 md:h-20 max-md:hidden md:m-3'
                     decoding='async'
                     loading='lazy'
-                />
-                <Image
-                    quality={'max'}
-                    src={submarca}
-                    alt='Logo Buque Choco Rosas'
-                    class='md:hidden w-28 h-28 max-sm:h-16 max-sm:w-16'
-                    decoding='async'
-                    loading='eager'
                 />
             </a>
             <ul
                 class='flex items-center divide-x-2 divide-neutral-500 text-neutral-600 font-bold tracking-widest transition-transform duration-500'>
                 <li
-                    class='hover:text-neutral-900 hover:underline px-8 max-md:border-hidden max-md:px-4 transition duration-300 max-sm:hidden max-md:text-lg'>
+                    class='hover:text-neutral-900 hover:underline px-8 max-md:hidden transition duration-300'>
                     <a href='/'>Início</a>
                 </li>
                 <li
-                    class='hover:text-neutral-900 hover:underline md:px-7 max-md:border-hidden max-md:pr-2 transition duration-300 max-sm:pl-4 max-md:text-lg'>
+                    class='hover:text-neutral-900 hover:underline md:px-7 max-md:hidden transition duration-300'>
                     <a href='/links'>Links</a>
                 </li>
                 <li
-                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:border-hidden max-md:px-3 transition duration-300 max-md:text-lg'>
+                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:hidden transition duration-300'>
                     <a href='/produtos'>Produtos</a>
                 </li>
                 <li
-                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:border-hidden max-md:px-2 transition duration-300 max-md:text-lg'>
+                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:hidden transition duration-300'>
                     <a href='/sobre'>Sobre</a>
                 </li>
                 <!-- <li
