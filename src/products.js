@@ -3,13 +3,13 @@ export const buquesMorango = [
     {
         id: '100101',
         nome: 'Mimo',
-        intro: 'Buquê mimo é um presente para todas as ocasiões.',
+        intro: 'O buquê mimo é um presente para todas as ocasiões.',
         desc: ['- 5 morangos banhados com chocolate', '- 2 rosas' ],
         obs: [
             '- Os morangos são banhados no chocolate, não são bombons de morango',
             '- A embalagem pode variar conforme a disponibilidade de estoque',
             '- Manter em refrigeração e consumir os morangos em até 24 horas',
-            '- Nossas rosas são artificiais podendo ser utilizadas depois como uma linda decoração.',
+            '- Nossas rosas são artificiais, podendo ser utilizadas depois como uma linda decoração.',
         ],
         cartao: true,
         precoAntigo: '555',
@@ -20,13 +20,13 @@ export const buquesMorango = [
     {
         id: '100102',
         nome: 'Eu Te Amo',
-        intro: 'Buquê eu te amo é o mais pedido por aqui! Neste buquê disponibilizamos três morangos para personalização. Podendo ser escrito nomes ou palavras pequenas.',
+        intro: 'O buquê eu te amo é o mais pedido por aqui! Neste buquê disponibilizamos três morangos para personalização. Podendo ser escrito nomes ou palavras pequenas.',
         desc: ['- 18 morangos banhados com chocolate e decorados', '- 1 rosa central'],
         obs: [
             '- Os morangos são banhados no chocolate, não são bombons de morango',
             '- A embalagem pode variar conforme a disponibilidade de estoque',
             '- Manter em refrigeração e consumir os morangos em até 24 horas',
-            '- Nossas rosas são artificiais podendo ser utilizadas depois como uma linda decoração.',
+            '- Nossas rosas são artificiais, podendo ser utilizadas depois como uma linda decoração.',
         ],
         cartao: true,
         precoAntigo: '',
