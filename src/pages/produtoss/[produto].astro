@@ -36,7 +36,7 @@ const {image, nome, desc, preco, intro, obs, categoria, precoAntigo} = Astro.pro
 
 <MainLayout title={nome}>
     <section class='pt-8'>
-        <div class='grid grid-cols-2 gap-24 max-lg:grid max-lg:grid-cols-1 pb-0'>
+        <div class='grid grid-cols-2 gap-24 max-lg:grid max-lg:grid-cols-1 max-lg:gap-10'>
             <div class='w-auto flex justify-end max-lg:justify-center max-lg:px-8'>
                 <img
                     src={image}
@@ -48,7 +48,7 @@ const {image, nome, desc, preco, intro, obs, categoria, precoAntigo} = Astro.pro
             </div>
             <div class="max-lg:flex max-lg:justify-center max-lg:w-screen">
                 <div
-                    class='flex flex-col justify-between py-10 max-lg:py-2 max-lg:justify-center max-w-[500px] h-full max-lg:w-auto max-lg:p-16 bg-fuchsia-200 p-11 rounded-xl'>
+                    class='flex flex-col justify-between py-10 max-lg:py-2 max-lg:justify-center max-w-[500px] h-full max-lg:w-auto max-lg:p-3 bg-fuchsia-200 p-11 rounded-xl'>
                     <h1 class='text-7xl mt-4 font-light pb-5'>{nome}</h1>
                     <p class='pb-6 text-lg'>{intro}</p>
                     <ol>
