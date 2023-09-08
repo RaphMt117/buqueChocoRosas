@@ -20,8 +20,6 @@ export async function getStaticPaths() {
     })
 }
 
-const {produto} = Astro.params
-
 interface Props {
     image: string
     nome: string
@@ -38,48 +36,57 @@ const {image, nome, desc, preco, intro, obs, categoria, precoAntigo} = Astro.pro
 
 <MainLayout title={nome}>
     <section class='pt-8'>
-        <div class='grid grid-cols-2 gap-1 max-lg:grid max-lg:grid-cols-1'>
-            <div class="w-auto flex justify-center max-lg:p-8">
+        <div class='grid grid-cols-2 gap-24 max-lg:grid max-lg:grid-cols-1 pb-0'>
+            <div class='w-auto flex justify-end max-lg:justify-center max-lg:px-8'>
                 <img
                     src={image}
                     alt={nome}
-                    width='600'
-                    height='600'
+                    width='500'
+                    height="500"
                     class='rounded-xl'
                 />
             </div>
-            <div class='grid py-10 max-lg:py-2 w-3/5 bg-fuchsia-200 p-11'>
-                <h1 class='text-7xl mt-4 font-light'>{nome}</h1>
-                <p class=''>{intro}</p>
-                <p>desc: {desc}</p>
-                <div class='font-extralight text-right'>
-                    {
-                        precoAntigo && (
-                            <p class='text-xl'>
-                                de: <span class='line-through'>R${precoAntigo}</span>
-                            </p>
-                        )
-                    }
-                    <p class='pb-20 text-4xl'>por: R${preco}</p>
+            <div class="max-lg:flex max-lg:justify-center max-lg:w-screen p-0 w-auto">
+                <div
+                    class='flex flex-col justify-between py-10 max-lg:py-2 max-lg:justify-center max-w-[500px] h-[500px] min-w-fit max-lg:w-auto max-lg:p-16 bg-fuchsia-200 p-11 rounded-xl'>
+                    <h1 class='text-7xl mt-4 font-light pb-5'>{nome}</h1>
+                    <p class='pb-6 text-lg'>{intro}</p>
+                    <ol>
+                        <p>Contém:</p>
+                        {desc.map((item) => <li>{item}</li>)}
+                    </ol>
+                    <div class='font-extralight text-right pt-8'>
+                        {
+                            precoAntigo && (
+                                <p class='text-xl'>
+                                    de:
+                                    <span class='line-through decoration-wavy cursor-default hover:decoration-fuchsia-600/40 decoration-fuchsia-500/90 decoration-2'>
+                                        R${precoAntigo}
+                                    </span>
+                                </p>
+                            )
+                        }
+                        <p class='pb-5 text-4xl'>por: R${preco}</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class='flex justify-center'>
             <div class='w-3/6 max-md:w-auto py-10 text-center min-w-fit'>
                 <details
                     class='bg-fuchsia-200 open:bg-fuchsia-300 open:ring-1 open:ring-black/20 open:shadow-md open:scale-[101%] text-opacity-0 open:text-opacity-100 p-8 rounded-md transition-all duration-500'
                     open>
-                    <summary class='text-base text-slate-900 cursor-pointer font-semibold select-none'>
+                    <summary
+                        class='text-base text-slate-900 cursor-pointer font-semibold select-none'>
                         Observações importantes
                     </summary>
-                    <div class='mt-3 text-slate-600 duration-300'>
+                    <div class='mt-3 text-slate-600 duration-300 max-lg:text-sm max-lg:text-left'>
                         <ol>
                             {obs.map((item) => <li class='pb-2'>{item}</li>)}
                         </ol>
                     </div>
                 </details>
             </div>
-
         </div>
     </section>
 </MainLayout>
