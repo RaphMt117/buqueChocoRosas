@@ -37,42 +37,49 @@ const {image, nome, desc, preco, intro, obs, categoria, precoAntigo} = Astro.pro
 ---
 
 <MainLayout title={nome}>
-    <section class='mx-auto w-10/12 pt-14'>
-        <div class='flex'>
-            <img
-                src={image}
-                alt={nome}
-                width='600'
-                height='600'
-                class='rounded-xl'
-            />
-            <div class='flex flex-col pl-7 py-10 justify-between'>
+    <section class='pt-8'>
+        <div class='grid grid-cols-2 gap-1 max-lg:grid max-lg:grid-cols-1'>
+            <div class="w-auto flex justify-center max-lg:p-8">
+                <img
+                    src={image}
+                    alt={nome}
+                    width='600'
+                    height='600'
+                    class='rounded-xl'
+                />
+            </div>
+            <div class='grid py-10 max-lg:py-2 w-3/5 bg-fuchsia-200 p-11'>
                 <h1 class='text-7xl mt-4 font-light'>{nome}</h1>
                 <p class=''>{intro}</p>
                 <p>desc: {desc}</p>
-                <div class="font-extralight">
+                <div class='font-extralight text-right'>
                     {
                         precoAntigo && (
-                            <p class="text-xl">de: <span class="line-through">R${precoAntigo}</span></p>
+                            <p class='text-xl'>
+                                de: <span class='line-through'>R${precoAntigo}</span>
+                            </p>
                         )
                     }
-                    <p class="pb-20 text-4xl">por: R${preco}</p>
+                    <p class='pb-20 text-4xl'>por: R${preco}</p>
                 </div>
             </div>
         </div>
-        <div class='w-10/12 p-10'>
-            <details
-                class='bg-fuchsia-200 open:bg-fuchsia-300 open:ring-1 open:ring-black/20 open:shadow-md open:scale-[101%] text-opacity-0 open:text-opacity-100 p-8 rounded-md transition-all duration-500'
-                open>
-                <summary class='text-base text-slate-900 cursor-pointer font-semibold select-none'>
-                    Observações importantes
-                </summary>
-                <div class='mt-3 text-slate-600   duration-300'>
-                    <ol>
-                        {obs.map((item) => <li class='pb-2'>{item}</li>)}
-                    </ol>
-                </div>
-            </details>
+        <div class="flex justify-center">
+            <div class='w-3/6 max-md:w-auto py-10 text-center min-w-fit'>
+                <details
+                    class='bg-fuchsia-200 open:bg-fuchsia-300 open:ring-1 open:ring-black/20 open:shadow-md open:scale-[101%] text-opacity-0 open:text-opacity-100 p-8 rounded-md transition-all duration-500'
+                    open>
+                    <summary class='text-base text-slate-900 cursor-pointer font-semibold select-none'>
+                        Observações importantes
+                    </summary>
+                    <div class='mt-3 text-slate-600 duration-300'>
+                        <ol>
+                            {obs.map((item) => <li class='pb-2'>{item}</li>)}
+                        </ol>
+                    </div>
+                </details>
+            </div>
+
         </div>
     </section>
 </MainLayout>
