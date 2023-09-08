@@ -21,29 +21,36 @@ export const links = [
     {
         text: 'Início',
         url: '/',
+        icon: 'home',
     },
     {
         text: 'Produtos',
         url: '/produtos',
-    },
-    {
-        text: 'Sobre',
-        url: '/sobre',
+        icon: 'sacola',
     },
     {
         text: 'Buquês',
         url: '/buques',
+        icon: 'buque',
     },
     {
         text: 'Brigadeiros',
         url: '/brigadeiros',
+        icon: 'docinhos',
     },
     {
         text: 'Trufas',
         url: '/trufas',
+        icon: 'trufa',
     },
     {
         text: 'Presentes',
         url: '/presentes',
+        icon: 'caixinha1',
+    },
+    {
+        text: 'Sobre',
+        url: '/sobre',
+        icon: 'reticencias',
     },
 ]

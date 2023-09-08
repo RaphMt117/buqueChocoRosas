@@ -9,12 +9,16 @@ import {links} from '../links'
     inicializarMenu()
 
     function abrirMenu() {
-        document.getElementById('menu').classList.remove('left-[-500px]')
+        document.getElementById('menu').classList.remove('left-[-650px]')
         document.getElementById('menu').classList.add('left-0')
+        document.getElementById('abrir-menu').classList.remove('opacity-100')
+        document.getElementById('abrir-menu').classList.add('opacity-0')
     }
     function fecharMenu() {
         document.getElementById('menu').classList.remove('left-0')
-        document.getElementById('menu').classList.add('left-[-500px]')
+        document.getElementById('menu').classList.add('left-[-650px]')
+        document.getElementById('abrir-menu').classList.remove('opacity-0')
+        document.getElementById('abrir-menu').classList.add('opacity-100')
     }
     // Separando botões para abrir e fechar carrinho pela tag
     function inicializarMenu() {
@@ -29,36 +33,45 @@ import {links} from '../links'
 <header>
     <section
         id='menu'
-        class='fixed top-0 left-[-500px] bg-fuchsia-600/80 h-screen w-5/6 md:hidden text-slate-300 z-50 duration-300 border-r border-fuchsia-700 pt-4 px-3 flex flex-col'>
-        <div class='text-fuchsia-900 m-1'>
+        class='fixed top-0 left-0 bg-fuchsia-600/95 h-screen w-9/12 md:hidden text-slate-300 z-50 duration-300 border-r border-fuchsia-700 pt-4 px-2 flex flex-col'>
+        <div class='text-fuchsia-100 m-1'>
             <Icon
                 id='fechar-menu'
                 name='seta'
-                class='-rotate-90'
+                class='-rotate-90 cursor-pointer'
                 width='36'
             />
         </div>
-        <ul class='w-full flex flex-col items-start pt-6'>
+        <ul class='w-full flex flex-col pt-6'>
             {
                 links.map((link) => (
-                    <li class='flex w-2/3 text-left bg-gradient-to-r from-fuchsia-400 to-transparent text-neutral-800 border-b border-l border-fuchsia-300 rounded-bl-md my-2 text-xl font-medium'>
-                        <a
-                            class='py-4 w-full flex items-start pl-5'
-                            href={link.url}>
-                            {link.text}
-                        </a>
-                    </li>
+                    <a
+                        class='py-4 w-full flex items-start pl-5 cursor-default'
+                        href={link.url}>
+                        <li class='flex w-7/12 text-left text-fuchsia-100 text-3xl font-light rounded-l-md pb-4'>
+                            <Icon
+                            name={link.icon}
+                            width='32'
+                            class="cursor-pointer"
+                            />
+                            <p class='pl-3 cursor-pointer'>
+                                {link.text}
+                            </p>
+                            </li>
+                    </a>
                 ))
             }
         </ul>
-        <div class='flex justify-between m-3'></div>
+        <hr class='my-6 border-neutral-300 ' />
+
+        
     </section>
     <nav
         id='navbar'
         class='bg-fuchsia-200 shadow-md shadow-fuchsia-100 w-full flex justify-between max-md:p-0'>
         <div
             class='max-w-6xl mx-auto object-center w-full flex justify-between md:pl-20 py-0 text-fuchsia-700 max-md:p-3'>
-            <div id="abrir-menu" class="md:hidden">
+            <div id="abrir-menu" class="md:hidden cursor-pointer transition-opacity opacity-100 duration-500">
                 <Icon
                     name='menu'
                     class='w-10 h-10'
