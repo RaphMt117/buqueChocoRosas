@@ -1,16 +1,26 @@
 ---
 import {buquesMorango} from '../products'
+import {buquesDocinho} from '../products'
 import {Icon} from 'astro-icon'
 ---
 
 <!-- Buques de Morango -->
-<h1 class='text-center font-semibold text-7xl py-12'>Buquês de Morangos</h1>
+<div class='flex text-center justify-center items-center'>
+    <Icon
+        class='text-slate-900 opacity-100'
+        name='morango'
+        width='56px'
+        height='48px'
+    />
+
+    <h1 class='text-center font-light text-7xl pt-12 pb-12 pl-2'>Buquês de Morangos</h1>
+</div>
 <div class='flex items-center justify-center'>
     <div class='grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5'>
         {
             buquesMorango.map((buque) => (
                 <a href={`/produtoss/${buque.id}`}>
-                    <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30'>
+                    <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30 rounded-lg'>
                         <div class='h-96 w-72'>
                             <img
                                 class='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
@@ -18,28 +28,37 @@ import {Icon} from 'astro-icon'
                                 alt={buque.nome}
                             />
                         </div>
-                        <div class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-fuchsia-950 group-hover:from-fuchsia-950/70 group-hover:via-black/60 group-hover:to-fuchsia-950/70 transition-all transform' />
-                        <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0'>
-                            <h1 class='font-dmserif text-3xl font-bold text-white pb-5'>
+                        <div class='absolute inset-0 bg-gradient-to-b from-fuchsia-950/20 via-transparent to-fuchsia-950/60 group-hover:from-fuchsia-950/60 group-hover:via-black/60 group-hover:to-fuchsia-950/60 transition-all transform' />
+                        <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[10%] max-sm:translate-y-[10%]'>
+                            <h1 class='font-dmserif text-3xl font-bold text-white pb-44'>
                                 {buque.nome}
                             </h1>
-                            <p class='mb-3 text-lg font-semibold italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                            <p class='absolute bottom-1 mb-3 text-lg font-semibold italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 max-sm:opacity-100'>
                                 {buque.desc[0]}
                                 <br />
                                 {buque.desc[1]}
                                 <br />
                                 {buque.desc[2]}
+                                <br />
+                                {buque.desc[3]}
+                                <br />
+                                {buque.desc[4]}
+                                <br />
+                                {buque.desc[5]}
+                                <br />
+                                {buque.desc[6]}
+                                <br />
+                                {buque.desc[7]}
                             </p>
-                            <Icon
-                                class='z-10 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100'
-                                name={buque.categoria}
-                                width='32px'
-                                height='32px'
-                            />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
+                        </div>
+                        <Icon
+                            class='absolute inset-4 z-10 text-white -translate-x-[60%] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:-translate-x-0'
+                            name={buque.categoria}
+                            width='32px'
+                            height='32px'
+                        />
+                        <div class='absolute bottom-3 translate-x-[60%] group-hover:translate-x-0 right-3 z-10 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 text-xl font-medium max-sm:opacity-100 max-sm:translate-x-0'>
+                            {buque.preco}
                         </div>
                     </div>
                 </a>
@@ -47,3 +66,67 @@ import {Icon} from 'astro-icon'
         }
     </div>
 </div>
+
+<!-- Buques de Docinhos -->
+<div class='flex text-center justify-center items-center'>
+    <Icon
+        class='text-slate-900 opacity-100'
+        name='docinhos'
+        width='56px'
+        height='48px'
+    />
+
+    <h1 class='text-center font-light text-7xl pt-12 pb-12 pl-2'>Buquês de Docinhos</h1>
+</div>
+<div class='flex items-center justify-center'>
+    <div class='grid grid-cols-1 gap-12 md:grid-cols-1 lg:grid-cols-1'>
+        {
+            buquesDocinho.map((buque) => (
+                <a href={`/produtoss/${buque.id}`}>
+                    <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30 rounded-lg'>
+                        <div class='h-96 w-72'>
+                            <img
+                                class='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
+                                src={buque.image}
+                                alt={buque.nome}
+                            />
+                        </div>
+                        <div class='absolute inset-0 bg-gradient-to-b from-fuchsia-950/20 via-transparent to-fuchsia-950/60 group-hover:from-fuchsia-950/60 group-hover:via-black/60 group-hover:to-fuchsia-950/60 transition-all transform' />
+                        <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[10%] max-sm:translate-y-[10%]'>
+                            <h1 class='font-dmserif text-3xl font-bold text-white pb-44'>
+                                {buque.nome}
+                            </h1>
+                            <p class='absolute bottom-1 mb-3 text-lg font-semibold italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 max-sm:opacity-100'>
+                                {buque.desc[0]}
+                                <br />
+                                {buque.desc[1]}
+                                <br />
+                                {buque.desc[2]}
+                                <br />
+                                {buque.desc[3]}
+                                <br />
+                                {buque.desc[4]}
+                                <br />
+                                {buque.desc[5]}
+                                <br />
+                                {buque.desc[6]}
+                                <br />
+                                {buque.desc[7]}
+                            </p>
+                        </div>
+                        <Icon
+                            class='absolute inset-4 z-10 text-white -translate-x-[60%] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:-translate-x-0'
+                            name={buque.categoria}
+                            width='32px'
+                            height='32px'
+                        />
+                        <div class='absolute bottom-3 translate-x-[60%] group-hover:translate-x-0 right-3 z-10 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 text-xl font-medium max-sm:opacity-100 max-sm:translate-x-0'>
+                            {buque.preco}
+                        </div>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</div>
+

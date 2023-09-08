@@ -83,7 +83,7 @@ export const buquesMorango = [
 ]
 
 // Buques de Docinho
-export const buqueDocinho = [
+export const buquesDocinho = [
     {
         id: '100201',
         nome: 'Doce Flor',
@@ -103,7 +103,6 @@ export const buqueDocinho = [
         cartao: true,
         preco: '122,00',
         image: '/buques/doceFlor.jpg',
-        categoria: 'docinho',
-        ingredientes: ['Côco', 'Chocolate', 'Baunilha'],
+        categoria: 'docinhos',
     },
 ]
