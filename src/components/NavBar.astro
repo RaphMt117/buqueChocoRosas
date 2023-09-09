@@ -2,7 +2,7 @@
 import {Image} from 'astro:assets'
 import shortLogo from '../assets/images/short-logo-rosa-e-roxo.png'
 import Icon from 'astro-icon'
-import {links} from '../links'
+import {links, socialLinks} from '../links'
 ---
 
 <script>
@@ -24,57 +24,82 @@ import {links} from '../links'
     function inicializarMenu() {
         const botaoFecharMenu = document.getElementById('fechar-menu')
         const botaoAbrirMenu = document.getElementById('abrir-menu')
+        const botaoMenu = document.getElementById('menu')
 
         botaoFecharMenu.addEventListener('click', fecharMenu)
         botaoAbrirMenu.addEventListener('click', abrirMenu)
+        botaoMenu.addEventListener('click', fecharMenu)
     }
 </script>
 
 <header>
     <section
         id='menu'
-        class='fixed top-0 left-0 bg-fuchsia-600/95 h-screen w-9/12 md:hidden text-slate-300 z-50 duration-300 border-r border-fuchsia-700 pt-4 px-2 flex flex-col'>
-        <div class='text-fuchsia-100 m-1'>
-            <Icon
-                id='fechar-menu'
-                name='seta'
-                class='-rotate-90 cursor-pointer'
-                width='36'
-            />
+        class='fixed top-0 left-[-650px] h-screen w-screen md:hidden text-slate-300 z-50 duration-300 flex flex-col'>
+        <div class='w-9/12 h-screen bg-fuchsia-600/95 border-r border-fuchsia-700 pt-4 px-2'>
+            <div class='text-fuchsia-100 m-1'>
+                <Icon
+                    id='fechar-menu'
+                    name='seta'
+                    class='-rotate-90 cursor-pointer'
+                    width='36'
+                />
+            </div>
+            <ul class='w-full flex flex-col pt-6'>
+                {
+                    links.map((link) => (
+                        <a
+                            class='py-4 w-full flex items-start pl-5 cursor-default'
+                            href={link.url}
+                            id='button'>
+                            <li class='flex w-7/12 text-left text-fuchsia-100 text-2xl font-light rounded-l-md pb-2'>
+                                <Icon
+                                name={link.icon}
+                                width='32'
+                                class="cursor-pointer min-w-[32px]"
+                                />
+                                <p class='pl-3 cursor-pointer'>
+                                    {link.text}
+                                </p>
+                                </li>
+                        </a>
+                    ))
+                }
+            </ul>
+            <hr class='my-1 border-neutral-300 ' />
+            <ul class='w-full flex flex-col pt-6'>
+                {
+                    socialLinks.map((link) => (
+                        <a
+                            class='pb-3 w-full flex pl-5 cursor-default'
+                            href={link.url}
+                            id='button'>
+                            <li class='flex w-7/12 text-left text-fuchsia-100 text-2xl font-light rounded-l-md pb-4'>
+                                <Icon
+                                name={link.icon}
+                                width='32'
+                                class="cursor-pointer"
+                                />
+                                <p class='pl-3 cursor-pointer'>
+                                    {link.text}
+                                </p>
+                                </li>
+                        </a>
+                    ))
+                }
+            </ul>
         </div>
-        <ul class='w-full flex flex-col pt-6'>
-            {
-                links.map((link) => (
-                    <a
-                        class='py-4 w-full flex items-start pl-5 cursor-default'
-                        href={link.url}>
-                        <li class='flex w-7/12 text-left text-fuchsia-100 text-3xl font-light rounded-l-md pb-4'>
-                            <Icon
-                            name={link.icon}
-                            width='32'
-                            class="cursor-pointer"
-                            />
-                            <p class='pl-3 cursor-pointer'>
-                                {link.text}
-                            </p>
-                            </li>
-                    </a>
-                ))
-            }
-        </ul>
-        <hr class='my-6 border-neutral-300 ' />
-
-        
     </section>
     <nav
         id='navbar'
-        class='bg-fuchsia-200 shadow-md shadow-fuchsia-100 w-full flex justify-between max-md:p-0'>
+        class='bg-fuchsia-200 shadow-md shadow-fuchsia-100 w-full flex justify-between'>
         <div
-            class='max-w-6xl mx-auto object-center w-full flex justify-between md:pl-20 py-0 text-fuchsia-700 max-md:p-3'>
-            <div id="abrir-menu" class="md:hidden cursor-pointer transition-opacity opacity-100 duration-500">
+            id='abrir-menu'
+            class='md:max-w-6xl md:mx-auto md:object-center md:w-full md:flex md:justify-between md:pl-20 text-fuchsia-700 max-md:text-fuchsia-100 max-md:pl-2 max-md:fixed max-md:top max-md:left-0 max-md:z-40'>
+            <div  class="md:hidden cursor-pointer transition-opacity opacity-100 duration-500 m-1">
                 <Icon
                     name='menu'
-                    class='w-10 h-10'
+                    class='w-12'
                 />
             </div>
             <a href='/'>
@@ -88,28 +113,23 @@ import {links} from '../links'
                 />
             </a>
             <ul
-                class='flex items-center divide-x-2 divide-neutral-500 text-neutral-600 font-bold tracking-widest transition-transform duration-500'>
+                class='flex items-center divide-x-2 divide-neutral-500 text-neutral-600 font-bold tracking-widest transition-transform duration-500 max-md:hidden'>
                 <li
-                    class='hover:text-neutral-900 hover:underline px-8 max-md:hidden transition duration-300'>
+                    class='hover:text-neutral-900 hover:underline px-8 transition duration-300'>
                     <a href='/'>Início</a>
                 </li>
                 <li
-                    class='hover:text-neutral-900 hover:underline md:px-7 max-md:hidden transition duration-300'>
+                    class='hover:text-neutral-900 hover:underline md:px-7 transition duration-300'>
                     <a href='/links'>Links</a>
                 </li>
                 <li
-                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:hidden transition duration-300'>
+                    class='hover:text-neutral-900 hover:underline md:px-6 transition duration-300'>
                     <a href='/produtos'>Produtos</a>
                 </li>
                 <li
-                    class='hover:text-neutral-900 hover:underline md:px-6 max-md:hidden transition duration-300'>
+                    class='hover:text-neutral-900 hover:underline md:px-6 transition duration-300'>
                     <a href='/sobre'>Sobre</a>
                 </li>
-                <!-- <li
-                    class="font-medium text-neutral-700 hover:text-neutral-900 hover:underline tracking-tight border-neutral-600 px-6 max-md:border-hidden cursor-pointer max-md:px-2 transition duration-300 max-md:text-lg"
-                >
-                    <a>Contato</a>
-                </li> -->
             </ul>
         </div>
     </nav>

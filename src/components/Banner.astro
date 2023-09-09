@@ -18,21 +18,21 @@ const {src} = Astro.props
 ---
 
 <section>
-    <Image
-        src={src}
-        alt='Banner Buque'
-        quality='mid'
-        class='relative brightness-[0.6] shadow-current shadow-sm'
-        height={1000}
-    />
-    <div
-        class='absolute z-10 -mt-80 max-xl:-mt-60 max-md:-mt-44 max-sm:mt-[-145px] max-md:pt-5 pt-0 w-screen text-center text-fuchsia-200 cursor-default'>
-        <h1 class='text-6xl max-md:text-4xl mb-5 pt-10 max-w-4xl m-auto font-bold'>
-            {heading}
-        </h1>
-        <p class='mb-5 text-3xl max-md:text-xl font-medium max-md:hidden'>
-            {text}
-        </p>
+    <div class='relative w-screen h-28 sm:h-36 md:h-56 lg:h-64 xl:h-80 2xl:h-[500px] mb-16 flex items-center justify-center text-center text-fuchsia-100'> 
+        <Image
+            src={src}
+            alt='Banner Buque'
+            quality='mid'
+            class='absolute brightness-[0.45] shadow-current shadow-sm object-fill w-screen h-full'
+        />
+        <div
+            class='absolute z-10 w-screen text-fuchsia-100 cursor-default'>
+            <h1 class='text-6xl max-md:text-4xl mb-5 pt-10 max-w-4xl m-auto font-bold'>
+                {heading}
+            </h1>
+            <p class='mb-5 text-3xl max-md:text-xl font-medium max-md:hidden'>
+                {text}
+            </p>
+        </div>
     </div>
-    <div class='pb-9 max-xl:pb-14'></div>
 </section>
