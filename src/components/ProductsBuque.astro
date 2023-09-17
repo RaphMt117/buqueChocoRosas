@@ -5,7 +5,7 @@ import {Icon} from 'astro-icon'
 ---
 
 <!-- Buques de Morango -->
-<div class='flex flex-row text-center items-center align-middle justify-center font-light text-7xl pt-12 pb-12 pl-2 max-lg:pl-0 max-lg:text-4xl text-slate-900 w-auto'>
+<div class='flex flex-row text-center items-center align-middle justify-center font-light text-7xl pt-12 pb-12 pl-2 max-md:pt-3 max-lg:pl-0 max-lg:text-4xl text-slate-900 w-auto'>
     <Icon
         class='min-w-[56px] max-md:hidden'
         name='morango'
@@ -18,7 +18,7 @@ import {Icon} from 'astro-icon'
     <div class='grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-8 snap-y'>
         {
             buquesMorango.map((buque) => (
-                <a href={`/produtoss/${buque.id}`} class='snap-center'>
+                <a href={`/produtoss/${buque.id}`}>
                     <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30 rounded-lg'>
                         <div class='h-96 w-72'>
                             <img
