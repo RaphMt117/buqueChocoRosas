@@ -18,15 +18,15 @@ const {src} = Astro.props
 ---
 
 <section>
-    <div class='relative w-screen h-28 sm:h-36 md:h-56 lg:h-64 xl:h-80 2xl:h-[500px] mb-16 flex items-center justify-center text-center text-fuchsia-100'> 
+    <div class='relative w-screen h-28 sm:h-36 md:h-56 lg:h-64 xl:h-80 2xl:h-[500px] mb-16 flex items-center justify-center text-center text-fuchsia-100 z-30'> 
         <Image
             src={src}
             alt='Banner Buque'
             quality='mid'
-            class='absolute brightness-[0.45] shadow-current shadow-sm object-fill w-screen h-full'
+            class='absolute brightness-[0.45] shadow-current shadow-sm object-fill w-screen h-full z-20'
         />
         <div
-            class='absolute z-10 w-screen text-fuchsia-100 cursor-default'>
+            class='absolute z-20 w-screen text-fuchsia-100 cursor-default'>
             <h1 class='text-6xl max-md:text-4xl mb-5 pt-10 max-w-4xl m-auto font-bold'>
                 {heading}
             </h1>

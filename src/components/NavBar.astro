@@ -33,10 +33,11 @@ import {links, socialLinks} from '../links'
 </script>
 
 <header>
+    <!-- mobile menu -->
     <section
         id='menu'
         class='fixed top-0 left-[-650px] h-screen w-screen md:hidden text-slate-300 z-50 duration-300 flex flex-col'>
-        <div class='w-9/12 h-screen bg-fuchsia-600/95 border-r border-fuchsia-700 pt-4 px-2'>
+        <div class='w-9/12 h-screen bg-fuchsia-500/95 border-r border-fuchsia-600 pt-4 px-2'>
             <div class='text-fuchsia-100 m-1'>
                 <Icon
                     id='fechar-menu'
@@ -54,19 +55,17 @@ import {links, socialLinks} from '../links'
                             id='button'>
                             <li class='flex w-7/12 text-left text-fuchsia-100 text-2xl font-light rounded-l-md pb-2'>
                                 <Icon
-                                name={link.icon}
-                                width='32'
-                                class="cursor-pointer min-w-[32px]"
+                                    name={link.icon}
+                                    width='32'
+                                    class='cursor-pointer min-w-[32px]'
                                 />
-                                <p class='pl-3 cursor-pointer'>
-                                    {link.text}
-                                </p>
-                                </li>
+                                <p class='pl-3 cursor-pointer'>{link.text}</p>
+                            </li>
                         </a>
                     ))
                 }
             </ul>
-            <hr class='my-1 border-neutral-300 ' />
+            <hr class='my-1 border-neutral-300' />
             <ul class='w-full flex flex-col pt-6'>
                 {
                     socialLinks.map((link) => (
@@ -76,14 +75,12 @@ import {links, socialLinks} from '../links'
                             id='button'>
                             <li class='flex w-7/12 text-left text-fuchsia-100 text-2xl font-light rounded-l-md pb-4'>
                                 <Icon
-                                name={link.icon}
-                                width='32'
-                                class="cursor-pointer"
+                                    name={link.icon}
+                                    width='32'
+                                    class='cursor-pointer'
                                 />
-                                <p class='pl-3 cursor-pointer'>
-                                    {link.text}
-                                </p>
-                                </li>
+                                <p class='pl-3 cursor-pointer'>{link.text}</p>
+                            </li>
                         </a>
                     ))
                 }
@@ -95,11 +92,15 @@ import {links, socialLinks} from '../links'
         class='bg-fuchsia-200 shadow-md shadow-fuchsia-100 w-full flex justify-between'>
         <div
             id='abrir-menu'
-            class='md:max-w-6xl md:mx-auto md:object-center md:w-full md:flex md:justify-between md:pl-20 text-fuchsia-700 max-md:text-fuchsia-100 max-md:pl-2 max-md:fixed max-md:top max-md:left-0 max-md:z-40'>
-            <div  class="md:hidden cursor-pointer transition-opacity opacity-100 duration-500 m-1">
+            class='md:max-w-6xl md:mx-auto md:object-center md:w-full md:flex md:justify-between md:pl-20 text-fuchsia-700 max-md:text-fuchsia-100 max-md:pl-2 max-md:relative max-md:top max-md:left-0 max-md:h-14'>
+            <div class='md:hidden cursor-pointer transition-opacity opacity-100 duration-500 m-1'>
                 <Icon
                     name='menu'
-                    class='w-12'
+                    class='w-12 fixed z-20 text-fuchsia-400'
+                />
+                <Icon
+                    name='menu'
+                    class='w-12 fixed z-10'
                 />
             </div>
             <a href='/'>
@@ -114,20 +115,16 @@ import {links, socialLinks} from '../links'
             </a>
             <ul
                 class='flex items-center divide-x-2 divide-neutral-500 text-neutral-600 font-bold tracking-widest transition-transform duration-500 max-md:hidden'>
-                <li
-                    class='hover:text-neutral-900 hover:underline px-8 transition duration-300'>
+                <li class='hover:text-neutral-900 hover:underline px-8 transition duration-300'>
                     <a href='/'>Início</a>
                 </li>
-                <li
-                    class='hover:text-neutral-900 hover:underline md:px-7 transition duration-300'>
+                <li class='hover:text-neutral-900 hover:underline md:px-7 transition duration-300'>
                     <a href='/links'>Links</a>
                 </li>
-                <li
-                    class='hover:text-neutral-900 hover:underline md:px-6 transition duration-300'>
+                <li class='hover:text-neutral-900 hover:underline md:px-6 transition duration-300'>
                     <a href='/produtos'>Produtos</a>
                 </li>
-                <li
-                    class='hover:text-neutral-900 hover:underline md:px-6 transition duration-300'>
+                <li class='hover:text-neutral-900 hover:underline md:px-6 transition duration-300'>
                     <a href='/sobre'>Sobre</a>
                 </li>
             </ul>
