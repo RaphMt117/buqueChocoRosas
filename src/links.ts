@@ -25,7 +25,7 @@ export const links = [
     },
     {
         text: 'Produtos',
-        url: '/produtos',
+        url: '/products',
         icon: 'sacola',
     },
     {

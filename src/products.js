@@ -92,13 +92,7 @@ export const buquesDocinho = [
     {
         id: '100201',
         nome: 'Doce Flor',
-        desc: ['- 5 morangos', '- 2 rosas'],
-        desc1: '- 10 Brigadeiros gourmet',
-        desc2: '- 1 Girassol central',
-        desc3: '',
-        desc4: '',
-        desc5: '',
-        desc6: '',
+        desc: ['- 10 brigadeiros gourmet', '- 1 girassol central'],
         obs: [
             '- Sabores dos brigadeiros ( Brigadeiro 50%, Ninho com Nutella, Beijinho e Ferreiro)',
             '- A embalagem pode variar conforme a disponibilidade de estoque',
