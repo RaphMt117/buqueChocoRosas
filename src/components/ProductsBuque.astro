@@ -19,7 +19,7 @@ import {Icon} from 'astro-icon'
         {
             buquesMorango.map((buque) => (
                 <a href={`/produtoss/${buque.id}`}>
-                    <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30 rounded-lg'>
+                    <div class='group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-md hover:shadow-black/30 rounded-lg max-sm:shadow-md max-sm:shadow-black/20'>
                         <div class='h-96 w-72'>
                             <img
                                 class='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
@@ -27,7 +27,11 @@ import {Icon} from 'astro-icon'
                                 alt={buque.nome}
                             />
                         </div>
-                        <div class='absolute inset-0 bg-gradient-to-b from-fuchsia-950/20 via-transparent to-fuchsia-950/60 group-hover:from-fuchsia-950/60 group-hover:via-black/60 group-hover:to-fuchsia-950/60 transition-all transform' />
+                        <div class='absolute 
+                        inset-0 
+                        bg-gradient-to-b from-fuchsia-950/20 via-transparent to-fuchsia-950/60 group-hover:from-fuchsia-950/60 group-hover:via-black/60 group-hover:to-fuchsia-950/60 
+                        max-sm:from-fuchsia-950/50 max-sm:via-black/50 max-sm:to-fuchsia-950/50
+                        transition-all transform' />
                         <div class='absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[10%] max-sm:translate-y-[10%]'>
                             <h1 class='font-dmserif text-3xl font-bold text-white pb-44'>
                                 {buque.nome}
@@ -51,7 +55,7 @@ import {Icon} from 'astro-icon'
                             </p>
                         </div>
                         <Icon
-                            class='absolute inset-4 z-10 text-white -translate-x-[60%] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:-translate-x-0'
+                            class='absolute inset-4 z-10 text-white -translate-x-[60%] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:-translate-x-0 max-sm:translate-x-0 max-sm:opacity-100'
                             name={buque.categoria}
                             width='32px'
                             height='32px'
